@@ -5,3 +5,5 @@ db.sqlite3
 *.key
 thumbs.db
 tango_with_django_2_code-master/*
+
+startserver.sh
