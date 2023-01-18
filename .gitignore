@@ -6,4 +6,4 @@ db.sqlite3
 thumbs.db
 tango_with_django_2_code-master/*
 
-startserver.sh
+*.sh
