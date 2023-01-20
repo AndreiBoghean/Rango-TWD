@@ -6,4 +6,5 @@ db.sqlite3
 thumbs.db
 tango_with_django_2_code-master/*
 
+**/migrations/[0-9][0-9][0-9][0-9]*
 *.sh
