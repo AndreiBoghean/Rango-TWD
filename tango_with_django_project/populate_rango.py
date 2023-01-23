@@ -23,41 +23,49 @@ def populate():
     python_pages = [
         {
             "title": "Official Python Tutorial",
-            "url": "http://docs.python.org/3/tutorial/"
+            "url": "http://docs.python.org/3/tutorial/",
+            "views": 1
         },
         {
             "title": "How to Think like a Computer Scientist",
-            "url": "http://www.greenteapress.com/thinkpython/"
+            "url": "http://www.greenteapress.com/thinkpython/",
+            "views": 2
         },
         {
             "title": "Learn Python in 10 Minutes",
-            "url": "http://www.korokithakis.net/tutorials/python/"
+            "url": "http://www.korokithakis.net/tutorials/python/",
+            "views": 4
         }
     ]
 
     django_pages = [
         {
             "title": "Official Django Tutorial",
-            "url": "https://docs.djangoproject.com/en/2.1/intro/tutorial01/"
+            "url": "https://docs.djangoproject.com/en/2.1/intro/tutorial01/",
+            "views": 8
         },
         {
             "title": "Django Rocks",
-            "url": "http://www.djangorocks.com/"
+            "url": "http://www.djangorocks.com/",
+            "views": 16
         },
         {
             "title": "How to Tango with Django",
-            "url": "http://www.tangowithdjango.com/"
+            "url": "http://www.tangowithdjango.com/",
+            "views": 32
         }
     ]
 
     other_pages = [
         {
             "title": "Bottle",
-            "url": "http://bottlepy.org/docs/dev/"
+            "url": "http://bottlepy.org/docs/dev/",
+            "views": 69
         },
         {
             "title": "Flask",
-            "url": "http://flask.pocoo.org/"
+            "url": "http://flask.pocoo.org",
+            "views": 128
         }
     ]
 
@@ -70,7 +78,7 @@ def populate():
     for category_name, category_data in categories.items():
         category = add_category(category_name, category_data["views"], category_data["likes"])
         for page in category_data["pages"]:
-            add_page(category, page["title"], page["url"])
+            add_page(category, page["title"], page["url"], page["views"])
 
     for category in Category.objects.all():
         for page in Page.objects.filter(category=category):
