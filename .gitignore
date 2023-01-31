@@ -3,7 +3,10 @@
 __pycache__/*
 db.sqlite3
 *.key
-thumbs.db
-tango_with_django_2_code-master/*
 
+tango_with_django_2_code
+tango_with_django_2_code/*
+tango_with_django_2_code/**/*
+
+thumbs.db
 **/migrations/[0-9][0-9][0-9][0-9]*

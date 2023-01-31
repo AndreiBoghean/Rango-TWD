@@ -4,7 +4,7 @@ testspace=$PWD
 echo $testspace
 ###########THE ONLY VARIABLES YOU SHOULD CONCERN YOURSELF WITH#################
 testsRepoURL="https://github.com/tangowithcode/tango_with_django_2_code.git"
-testableRepoURL="https://github.com/AmogooseSus/tango_with_django_project.git"
+testableRepoURL="https://github.com/AndreiBoghean/Rango-TWD.git"
 testableRepoName="Rango-TWD"
 testingRepoName="tango_with_django_2_code"
 ###############################################################################
@@ -64,7 +64,7 @@ do
             echo "restoring database from init script||||||||||||||||||||||||||||||||||||||||||||||||"
             rm -f "$djangoProjDir/db.sqlite3"
 
-            python "$djangoProjDir/manage.py" makemigrations rango
+            printf '1\n\"huh\"' | python "$djangoProjDir/manage.py" makemigrations rango
             python "$djangoProjDir/manage.py" migrate
 
             python "$djangoProjDir/populate_rango.py"
