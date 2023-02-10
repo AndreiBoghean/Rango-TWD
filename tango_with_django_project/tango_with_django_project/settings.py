@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 MEDIA_DIR = os.path.join(BASE_DIR, "media")
-# note:
+# note to self:
 # these variables defined above dont *seem* to be used in anything by Django,
 # and are not documentented anywhere if they are
 # this assumption was extended to the other variables based solely on the
@@ -117,6 +117,8 @@ PASSWORD_HASHERS = (
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",
     "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
 )
+
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 LOGIN_URL = "rango:login"
 
